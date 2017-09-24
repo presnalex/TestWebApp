@@ -19,12 +19,16 @@ public class MyTestServlet extends HttpServlet {
 		
 		System.out.println("info from user");
 		
+		String FirstName = request.getParameter("FirstName");
+		String SecondName = request.getParameter("SecondName");
+		
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
 		
 		PrintWriter out = response.getWriter();
 		
-		out.println("<h3>Saying hi from Александр</h3><br>I'm your friend");
+		out.println("<h3>Saying hi from Александр</h3><br>I'm your friend<br>");
+		out.println("Рад познакомиться" + " " + FirstName + " " +  SecondName);
 		out.close();
 		
 	}
